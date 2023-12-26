@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- compatibilidad con navegadores viejos -->
+    <title>Milano Food Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="contenedor-navegacion">
+        <div class="contenido-navegacion contenedor">
+          <div class="logo">
+            <h2>Milano Food Store</h2>
+          </div>
+          <nav class="navegacion ocultar">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Menú</a>
+            <a href="#">Chef</a>
+            <a href="#">Contacto</a>
+          </nav>
+          <div class="hamburguesa">
+            <span></span> <span></span> <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenido-header">
+        <div class="contenedor-encabezado">
+          <div class="texto-encabezado">
+            <h2>Bienvenidos</h2>
+            <a href="#" class="btn bordes">NUESTRO MENÚ</a>
+          </div>
+          <video autoplay loop muted>
+            <!-- se repite el video automaticamente una vez que termina-->
+            <source src="/assets/bg_video.mp4" />
+          </video>
+        </div>
+      </div>
+    </header>
+
+    <div class="contenedor-nosotros contenedor">
+      <div class="texto-nosotros">
+        <p class="bienvenida">Bienvenido a</p>
+        <h1>Milano Food Store</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum
+          doloribus quo iure eos placeat non dolorem modi quam ut mollitia
+          veritatis velit amet harum, deleniti asperiores minima quidem impedit.
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ab dolores
+          asperiores. Vitae harum consectetur ipsam eum reiciendis temporibus
+          quos cumque error, assumenda nam, quisquam ad, culpa repellat nihil
+          aliquam?
+        </p>
+        <a href="#" class="btn btn-rojo">Contactar</a>
+      </div>
+      <div class="imagenes-nosotros">
+        <div class="imagen1">
+          <img data-src="assets/nosotros1.webp" alt="Mujer comiendo pizza" />
+          <!-- El data-src sirven para almacenar informacion extra-->
+        </div>
+        <div class="imagenes2">
+          <img data-src="assets/nosotros2.webp" alt="Mujeres comiendo pizza" />
+          <!-- El data-src sirven para almacenar informacion extra-->
+          <img data-src="assets/nosotros3.webp" alt="Plato con pasta" />
+          <!-- El data-src sirven para almacenar informacion extra-->
+        </div>
+      </div>
+    </div>
+
+    <section class="menu contenedor">
+      <h2 class="texto-platos">Pizzas Más Pedidos</h2>
+      <div class="botones-platos">
+        <button class="todos btn btn-verde">Todos</button>
+        <button class="ensaladas btn btn-verde">ensaladas</button>
+        <button class="pasta btn btn-verde">Pasta</button>
+        <button class="pizza btn btn-verde">Pizza</button>
+        <button class="postres btn btn-verde">Postres</button>
+      </div>
+      <div class="platos">
+        <div class="plato" data-plato="ensalada">
+          <img data-src="assets/ensalada2.webp" alt="ensalada" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="ensalada">
+          <img data-src="assets/ensalada.webp" alt="ensalada" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="ensalada">
+          <img data-src="assets/ensalada2.webp" alt="ensalada" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pasta">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pasta">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pasta">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="postre">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="postre">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="plato" data-plato="postre">
+          <img data-src="assets/pizza1.webp" alt="pizza" />
+          <h2>TITULO</h2>
+          <p>DESCRIPCION</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/app.js"></script>
+  </body>
+</html>
