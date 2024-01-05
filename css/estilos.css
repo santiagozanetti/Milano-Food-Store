@@ -126,6 +126,7 @@ img {
   background-color: var(--verde);
 }
 
+/* BOTONES DEL MENU*/
 .btn-verde {
   background-color: var(--verde);
   border: none;
@@ -133,6 +134,10 @@ img {
   margin-bottom: 2rem;
   font-family: var(--parrafos);
   font-weight: bold;
+}
+
+.btn-verde:hover {
+  background-color: var(--rojo);
 }
 
 /* ENCABEZADO */
@@ -372,7 +377,7 @@ video {
 }
 
 .plato p {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .precio {
@@ -391,5 +396,5 @@ video {
   border: none;
   background-color: var(--verde);
   color: var(--blanco);
-  font-family: var(--parrafos);
+  height: 3.8rem;
 }
