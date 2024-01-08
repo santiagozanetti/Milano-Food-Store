@@ -60,6 +60,7 @@ img {
   right: 5rem;
   font-weight: bold;
   user-select: none;
+  padding: 0.5rem 1rem;
 }
 
 /* BOTON CONTACTAR */
@@ -134,6 +135,9 @@ img {
   margin-bottom: 2rem;
   font-family: var(--parrafos);
   font-weight: bold;
+  cursor: pointer;
+  color: var(--blanco);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn-verde:hover {
@@ -141,7 +145,6 @@ img {
 }
 
 /* ENCABEZADO */
-
 .contenedor-navegacion {
   background-color: var(--oscuro);
   position: relative;
@@ -179,7 +182,8 @@ img {
 }
 
 .navegacion a:hover {
-  color: yellow;
+  color: var(--verde);
+  background-color: transparent; /* Hacer que el fondo sea transparente en lugar de oscuro */
 }
 
 .navegacion a:first-child {
@@ -193,9 +197,15 @@ img {
   bottom: 0;
   height: 100vh;
   width: 40rem;
-  padding: 3rem 4rem;
+  padding: 3rem 2rem;
   background-color: var(--oscuro);
   animation: desplazamiento 0.5s ease-in-out;
+}
+
+.hamburguesa {
+  padding: 0.5rem;
+  border: 2px solid var(--blanco);
+  border-radius: 5px;
 }
 
 .hamburguesa:hover {
@@ -206,7 +216,8 @@ img {
   display: block;
   width: 5rem;
   height: 0.5rem;
-  margin-bottom: 0.5rem; /* separo los span */
+  margin-bottom: 0.5rem;
+  margin-top: 0.4rem; /* separo los span */
 }
 
 /* VIDEO */
@@ -238,6 +249,13 @@ img {
 .texto-encabezado h2 {
   color: var(--blanco);
   font-size: 4rem;
+  margin-bottom: 3rem; /* Agregar margen inferior para separar del botón */
+}
+
+.texto-encabezado a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem; /* Añadir espacio entre el texto y el botón */
 }
 
 @media (min-width: 768px) {
@@ -275,7 +293,7 @@ video {
 .texto-nosotros .bienvenida {
   /* para el <p> de Bienvenido a */
   font-size: 3rem;
-  color: var(--);
+  color: var(--oscuro);
   text-align: center;
 }
 
@@ -291,6 +309,7 @@ video {
 .texto-nosotros h1 {
   font-size: 5rem;
   text-align: center;
+  margin-bottom: 1.5rem; /* Agrega espacio entre elementos */
 }
 
 @media (min-width: 768px) {
@@ -302,6 +321,7 @@ video {
 .texto-nosotros p {
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 1.5rem; /* Agrega espacio entre elementos */
 }
 
 @media (min-width: 768px) {
@@ -325,7 +345,7 @@ video {
 }
 
 .imagenes2 img {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .menu {
@@ -341,11 +361,15 @@ video {
 .botones-platos {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem; /* agregar un espacio entre los botones */
 }
 
 .botones-platos button {
   flex: 0 0 calc(50% - 1rem);
   padding: 1rem 3rem;
+  margin-bottom: 1rem;
+  background-color: #4caf50; /* Verde */
+  color: #ffffff; /* Blanco */
 }
 
 @media (min-width: 768px) {
@@ -365,11 +389,18 @@ video {
   }
 }
 
+/* Agrega un estilo para resaltar el botón activo */
+.botones-platos .btn.active {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
 .plato {
   flex: 0 0 calc(33.3% - 1rem);
   border: 1px solid #dcebeb;
   padding: 2rem;
   border-radius: 1rem;
+  margin-bottom: 1.8rem;
 }
 
 .plato h2 {
@@ -391,14 +422,15 @@ video {
 }
 
 .precio button {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
   border: none;
   background-color: var(--verde);
   color: var(--blanco);
-  height: 3.8rem;
+  height: auto;
 }
 
+/* SEPARADOR */
 .separador {
   background-image: url("../assets/ensalada.webp");
   background-size: cover; /* para que se adapte a su contenedor padre*/
@@ -406,6 +438,8 @@ video {
   background-repeat: no-repeat;
   position: relative;
   z-index: 2;
+  margin-top: 3rem;
+  color: #fff;
 }
 
 .separador::before {
@@ -447,4 +481,190 @@ video {
   .contenido-separador p {
     text-align: left;
   }
+}
+
+/* seccion chef*/
+.chef h2 {
+  background-color: var(--rojo);
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: var(--blanco);
+  font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+  .contenido-chef {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.texto-chef,
+.imagen-chef {
+  flex: 0 0 calc(50% - 1rem);
+  margin-bottom: 2rem;
+}
+
+.imagen-chef img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  border-radius: 10px; /* bordes redondeados  */
+}
+
+.texto-chef h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem; /* Espacio entre el título y el párrafo */
+}
+
+.texto-chef p {
+  font-size: 2rem;
+}
+
+.formulario-contacto {
+  padding-top: 5rem;
+}
+
+/* FORMULARIO CONTACTO */
+
+@media (min-width: 768px) {
+  .formulario-contacto {
+    display: flex;
+  }
+}
+
+.informacion-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--oscuro);
+  padding: 2rem;
+}
+
+.informacion-contacto,
+.formulario {
+  flex: 0 0 calc(50% - 1rem);
+}
+
+.informacion-contacto h3,
+.informacion-contacto p,
+.redes-sociales i {
+  color: var(--blanco);
+}
+
+.informacion-contacto h3 {
+  font-size: 3.5rem;
+  font-family: var(--titulos);
+}
+
+.informacion-contacto p {
+  font-size: 2rem;
+}
+
+.informacion-contacto i {
+  margin-right: 1.4rem;
+  font-size: 2rem; /* Ajusta el tamaño de los iconos */
+  color: var(--blanco);
+}
+
+.formulario {
+  padding: 2rem;
+}
+
+.input-formulario label {
+  display: block; /* para poner un input abajo del otro*/
+  font-size: 2rem;
+  font-family: var(--parrafos);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.input-formulario input,
+.input-formulario textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 7px;
+  outline: none;
+  font-family: var(--parrafos);
+}
+
+.input-formulario textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.btn-formulario {
+  margin-top: 1.5rem; /* Espacio entre el formulario y el botón */
+}
+
+/* Estilo del botón de enviar */
+.btn-formulario .btn-verde {
+  width: 100%; /* Ajusta el ancho del botón al 100% del contenedor */
+}
+
+/* SECCION FOOTER */
+
+@media (min-width: 768px) {
+  .contenedor-piepagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.info {
+  flex: 0 0 calc(25% - 1rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.pie-pagina {
+  margin-top: 5rem;
+  background-color: rgb(20, 20, 20);
+  padding: 5rem;
+}
+
+.info h3,
+.info p {
+  color: var(--blanco);
+  text-align: center;
+}
+
+.info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-size: 1.8rem;
+}
+
+.info i {
+  display: center;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.info i.fa-solid,
+.info i.fa-brands {
+  margin-right: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--oscuro);
+  color: var(--blanco);
+  padding: 2rem;
+  font-size: 2rem;
+  font-family: var(--parrafos); /* Ajusta la fuente según tu preferencia */
+}
+
+.footer p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
+.footer span {
+  font-weight: bold; /* Hace que el texto del año sea más destacado */
 }

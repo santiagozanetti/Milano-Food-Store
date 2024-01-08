@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="/assets/icono.png" />
   </head>
   <body>
     <header class="encabezado">
@@ -39,6 +40,10 @@
         </div>
       </div>
 
+      <!-- 
+      VIDEO PAGINA HOME 
+    -->
+
       <div class="contenido-header">
         <div class="contenedor-encabezado">
           <div class="texto-encabezado">
@@ -52,6 +57,10 @@
         </div>
       </div>
     </header>
+
+    <!-- 
+      SECCION DE NOSOTROS 
+    -->
 
     <div class="contenedor-nosotros contenedor">
       <div class="texto-nosotros">
@@ -67,7 +76,7 @@
           quos cumque error, assumenda nam, quisquam ad, culpa repellat nihil
           aliquam?
         </p>
-        <a href="#" class="btn btn-rojo">Contactar</a>
+        <a href="#" class="btn btn-verde">Contacta  con Nosotros</a>
       </div>
       <div class="imagenes-nosotros">
         <div class="imagen1">
@@ -83,14 +92,28 @@
       </div>
     </div>
 
+    <!-- 
+      MENÚ DE PLATOS 
+    -->
+
     <section class="menu contenedor">
       <h2 class="texto-platos">Pizzas Más Pedidas</h2>
       <div class="botones-platos">
-        <button class="todos btn btn-verde">Todos</button>
-        <button class="ensaladas btn btn-verde">ensaladas</button>
-        <button class="pasta btn btn-verde">Pasta</button>
-        <button class="pizza btn btn-verde">Pizza</button>
-        <button class="postres btn btn-verde">Postres</button>
+        <button class="btn btn-verde todos active" data-categoria="todos">
+          Todos
+        </button>
+        <button class="btn btn-verde ensaladas" data-categoria="ensaladas">
+          Ensaladas
+        </button>
+        <button class="btn btn-verde pasta" data-categoria="pasta">
+          Pasta
+        </button>
+        <button class="btn btn-verde pizza" data-categoria="pizza">
+          Pizza
+        </button>
+        <button class="btn btn-verde postres" data-categoria="postres">
+          Postres
+        </button>
       </div>
       <div class="platos">
         <div class="plato" data-plato="ensalada">
@@ -204,6 +227,10 @@
       </div>
     </section>
 
+    <!-- 
+      SEPARADOR 
+    -->
+
     <div class="separador">
       <div class="contenido-separador contenedor">
         <h2>Pizza mas rica de Zona norte</h2>
@@ -211,6 +238,107 @@
         <a href="#" class="btn btn-verde">Pedí ahora</a>
       </div>
     </div>
+
+    <!-- 
+      SECCION DE CHEF 
+    -->
+
+    <section class="chef contenedor">
+      <h2>Mauro y Jorge</h2>
+      <div class="contenido-chef">
+        <div class="texto-chef">
+          <h3>
+            Hola hola hola hola hola hola safgasf asd fsdfas safasfsad
+            sadfsadfas
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            voluptas dolore repellat, fuga possimus ipsum optio, itaque
+            necessitatibus velit aspernatur deleniti? Atque beatae iste iusto
+            architecto sed commodi ipsum natus.
+          </p>
+          <a href="#" class="btn btn-verde">Leer Más</a>
+        </div>
+        <div class="imagen-chef">
+          <img data-src="/assets/chef.webp" alt="foto de los chef" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      SECCION FORMULARIO 
+    -->
+
+    <div class="formulario-contacto">
+      <div class="informacion-contacto contenedor">
+        <h3>Contactanos</h3>
+        <p><i class="fa-solid fa-location-dot"></i>DIRECCION</p>
+        <p><i class="fa-solid fa-envelope"></i>MAIL</p>
+        <p><i class="fa-solid fa-phone"></i>+54 11-5824-6387</p>
+        <p><i <i class="fa-brands fa-instagram"></i>@milanofoodstore</p>
+        <!-- HACERLO LINK -->
+      </div>
+      <form class="formulario">
+        <div class="input-formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Ingrese su nombre" id="nombre" />
+        </div>
+        <div class="input-formulario">
+          <label for="apellido">Apellido</label>
+          <input type="text" placeholder="Ingrese su apellido" id="apellido" />
+        </div>
+        <div class="input-formulario">
+          <label for="correo">Correo</label>
+          <input type="email" placeholder="Ingrese su email" id="correo" />
+        </div>
+        <div class="input-formulario">
+          <label for="telefono">Telefono</label>
+          <input
+            type="tel"
+            placeholder="ej: +54 911 15-6037-6134"
+            id="telefono"
+          />
+        </div>
+        <div class="input-formulario">
+          <label for="mensaje">Mensaje</label>
+          <textarea></textarea>
+        </div>
+        <div class="btn-formulario">
+          <input type="submit" class="btn btn-verde" value="Enviar" />
+        </div>
+      </form>
+    </div>
+
+    <div class="pie-pagina contenedor">
+      <div class="contenedor-piepagina">
+        <div class="info">
+          <h3><i class="fa-solid fa-location-dot"></i></i> Dirección</h3>
+          <p>123 Calle Principal, Ciudad</p>
+        </div>
+        <div class="info">
+          <h3><i class="fa-solid fa-clock"></i> Disponibilidad</h3>
+          <p>Lunes a Domingo: 9 AM - 10 PM</p>
+        </div>
+        <div class="info">
+          <h3><i class="fa-solid fa-phone"></i> Teléfono</h3>
+          <p>+54 11-1234-5678</p>
+        </div>
+        <div class="info">
+          <h3><i class="fa-brands fa-instagram"></i> Instagram</h3>
+          <p>
+            <span class="instagram-icon"> </span>
+            @milanofoodstore
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Todos los derechos reservados <span>&copy;2024</span> Milano Food Store
+      </p>
+    </footer>
+
     <script src="js/app.js"></script>
   </body>
 </html>

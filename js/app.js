@@ -91,7 +91,7 @@ const platos = () => {
   mostrarPlatos(ensaladas, pastas, pizzas, postres, platosArreglo);
 };
 
-const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
+/* const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
   btnEnsaladas.addEventListener("click", () => {
     limpiarHtml(contenedorPlatos);
     ensaladas.forEach((ensalada) => contenedorPlatos.appendChild(ensalada));
@@ -115,6 +115,44 @@ const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
   btnTodos.addEventListener("click", () => {
     limpiarHtml(contenedorPlatos);
     todos.forEach((todo) => contenedorPlatos.appendChild(todo));
+  });
+}; */
+
+const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
+  const botonesCategorias = document.querySelectorAll(".botones-platos .btn");
+
+  botonesCategorias.forEach((btnCategoria) => {
+    btnCategoria.addEventListener("click", () => {
+      // Remover la clase 'active' de todos los botones
+      botonesCategorias.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      // Agregar la clase 'active' al botón clickeado
+      btnCategoria.classList.add("active");
+
+      limpiarHtml(contenedorPlatos);
+
+      switch (btnCategoria.getAttribute("data-categoria")) {
+        case "ensaladas":
+          ensaladas.forEach((ensalada) =>
+            contenedorPlatos.appendChild(ensalada)
+          );
+          break;
+        case "pasta":
+          pastas.forEach((pasta) => contenedorPlatos.appendChild(pasta));
+          break;
+        case "pizza":
+          pizzas.forEach((pizza) => contenedorPlatos.appendChild(pizza));
+          break;
+        case "postres":
+          postres.forEach((postre) => contenedorPlatos.appendChild(postre));
+          break;
+        default:
+          todos.forEach((todo) => contenedorPlatos.appendChild(todo));
+          break;
+      }
+    });
   });
 };
 
