@@ -18,21 +18,23 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/estilos.css" />
-    <link rel="icon" href="/assets/icono.png" />
+    <link rel="icon" href="/assets/logoMIlano2.png" />
   </head>
   <body>
     <header class="encabezado">
       <div class="contenedor-navegacion">
         <div class="contenido-navegacion contenedor">
           <div class="logo">
+            <img data-src="assets/logoMIlano2.png" alt="Logo" />
             <h2>Milano Food Store</h2>
           </div>
+
           <nav class="navegacion ocultar">
-            <a href="#">Inicio</a>
-            <a href="#">Sobre Nosotros</a>
-            <a href="#">Menú</a>
-            <a href="#">Chef</a>
-            <a href="#">Contacto</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Sobre Nosotros</a>
+            <a href="#menu">Menú</a>
+            <a href="#chef">Chef</a>
+            <a href="#contacto">Contacto</a>
           </nav>
           <div class="hamburguesa">
             <span></span> <span></span> <span></span>
@@ -48,11 +50,11 @@
         <div class="contenedor-encabezado">
           <div class="texto-encabezado">
             <h2>Bienvenidos</h2>
-            <a href="#" class="btn bordes">NUESTRO MENÚ</a>
+            <a href="#menu" class="btn bordes">NUESTRO MENÚ</a>
           </div>
           <video autoplay loop muted>
             <!-- se repite el video automaticamente una vez que termina-->
-            <source src="/assets/bg_video.mp4" />
+            <source src="/assets/videoHome.mp4" />
           </video>
         </div>
       </div>
@@ -62,31 +64,39 @@
       SECCION DE NOSOTROS 
     -->
 
-    <div class="contenedor-nosotros contenedor">
+    <div id="nosotros" class="contenedor-nosotros contenedor">
       <div class="texto-nosotros">
         <p class="bienvenida">Bienvenido a</p>
         <h1>Milano Food Store</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum
-          doloribus quo iure eos placeat non dolorem modi quam ut mollitia
-          veritatis velit amet harum, deleniti asperiores minima quidem impedit.
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ab dolores
-          asperiores. Vitae harum consectetur ipsam eum reiciendis temporibus
-          quos cumque error, assumenda nam, quisquam ad, culpa repellat nihil
-          aliquam?
+        <p class="descripcion">
+          <strong>MILANO</strong> es un emprendimiento gastronómico
+          especializado en la producción de pizzas estilo italianas 100% caseras
+          hechas con harina agroecológica.
         </p>
-        <a href="#" class="btn btn-verde">Contacta  con Nosotros</a>
+        <p class="descripcion">
+          Tenemos un producto premium y gourmet, con ingredientes de primera
+          calidad. La masa es uno de nuestros pilares fundamentales; el
+          fermentado de 24hs en frío genera en la masa un alto porcentaje de
+          aire que da como resultado unas pizzas livianas y de gran sabor.
+        </p>
+        <p class="descripcion">
+          Nos dedicamos a la venta particular para que stockees tu freezer y a
+          la realización de catering para eventos particulares y corporativos.
+        </p>
+        <a href="#contacto" class="btn btn-verde">Contacta con Nosotros</a>
       </div>
       <div class="imagenes-nosotros">
         <div class="imagen1">
-          <img data-src="assets/nosotros1.webp" alt="Mujer comiendo pizza" />
+          <img
+            data-src="assets/nosotros4.png"
+            alt="Mauro mostrando pizza recién salida de la parrila"
+          />
           <!-- El data-src sirven para almacenar informacion extra-->
         </div>
         <div class="imagenes2">
-          <img data-src="assets/nosotros2.webp" alt="Mujeres comiendo pizza" />
+          <img data-src="assets/nosotros5.jpg" alt="Pizzas en la parrila" />
           <!-- El data-src sirven para almacenar informacion extra-->
-          <img data-src="assets/nosotros3.webp" alt="Plato con pasta" />
+          <img data-src="assets/nosotros7.jpg" alt="Personal" />
           <!-- El data-src sirven para almacenar informacion extra-->
         </div>
       </div>
@@ -96,7 +106,7 @@
       MENÚ DE PLATOS 
     -->
 
-    <section class="menu contenedor">
+    <section id="menu" class="menu contenedor">
       <h2 class="texto-platos">Pizzas Más Pedidas</h2>
       <div class="botones-platos">
         <button class="btn btn-verde todos active" data-categoria="todos">
@@ -172,17 +182,19 @@
         </div>
         <div class="plato" data-plato="pizza">
           <img data-src="assets/pizza1.webp" alt="pizza" />
-          <h2>TITULO</h2>
-          <p>DESCRIPCION</p>
+          <h2>MOZZARELLA</h2>
+          <p>Salsa de tomates, mozzarella y orégano.</p>
           <div class="precio">
             <p>$2.000</p>
             <button><i class="fa-solid fa-basket-shopping"></i></button>
           </div>
         </div>
         <div class="plato" data-plato="pizza">
-          <img data-src="assets/pizza2.webp" alt="pizza" />
-          <h2>TITULO</h2>
-          <p>DESCRIPCION</p>
+          <img data-src="assets/fugazzetta.jpg" alt="pizza" />
+          <h2>FUGAZZETA</h2>
+          <p>
+            Salsa de tomates, mozzarella, cebolla blanca, provolone y orégano
+          </p>
           <div class="precio">
             <p>$2.000</p>
             <button><i class="fa-solid fa-basket-shopping"></i></button>
@@ -190,8 +202,125 @@
         </div>
         <div class="plato" data-plato="pizza">
           <img data-src="assets/pizza3.jpg" alt="pizza" />
-          <h2>TITULO</h2>
-          <p>DESCRIPCION</p>
+          <h2>NAPOLITANA</h2>
+          <p>
+            Salsa de tomates, mozzarella, provolone, tomates cherry, albahaca
+            fresca y ajo picado
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>CHAMPIGNONES CON AJO Y PEREJIL</h2>
+          <p>
+            Base de ajo, salsa de tomates, mozzarella y champignones salteados
+            con ajo y perejil
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>JAMÓN Y MORRONES</h2>
+          <p>
+            Salsa de tomates, mozzarella, provolone, jamón cocido, morrones
+            asados y ajo
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>JAMÓN CRUDO, RÚCULA Y PARMESANO</h2>
+          <p>
+            Salsa de tomates, mozzarella, provolone, jamón crudo, rúcula y
+            parmesano
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>BERENJENAS ASADAS</h2>
+          <p>
+            Salsa de tomates, mozzarella, dup de zanahorias, berenjenas asadas,
+            nueces trituradas y perejil
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>PESTO</h2>
+          <p>
+            Salsa de tomates, mozzarella, provolone, pesto de albahaca, nueces,
+            aceite de oliva y tomates secos
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>TRES QUESOS</h2>
+          <p>Salsa de tomates, mozzarella, provolone, queso azul y orégano</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>PEPPERONI</h2>
+          <p>
+            Salsa de tomates, mozzarella, provolone, rodajas de pepperoni y ají
+            molido
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>PROVOLONE CON MIEL</h2>
+          <p>Salsa de tomates, mozzarella, provolone, miel y orégano</p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>CEBOLLA CARAMELIZADA CON QUESO AZUL</h2>
+          <p>
+            Salsa de tomates, mozzarella, cebolla morada caramelizada y queso
+            azul
+          </p>
+          <div class="precio">
+            <p>$2.000</p>
+            <button><i class="fa-solid fa-basket-shopping"></i></button>
+          </div>
+        </div>
+        <div class="plato" data-plato="pizza">
+          <img data-src="assets/pizza3.jpg" alt="pizza" />
+          <h2>PROVOLONE AHUMADO CON TOMATES CONFITADOS</h2>
+          <p>
+            Salsa de tomates, mozzarella, provolone ahumado, tomates cherry
+            confitados al romero y pimentón
+          </p>
           <div class="precio">
             <p>$2.000</p>
             <button><i class="fa-solid fa-basket-shopping"></i></button>
@@ -233,9 +362,9 @@
 
     <div class="separador">
       <div class="contenido-separador contenedor">
-        <h2>Pizza mas rica de Zona norte</h2>
-        <p>pedite la mejor pizza papu</p>
-        <a href="#" class="btn btn-verde">Pedí ahora</a>
+        <h2>¿Que estas esparando para hacer tu pedido?</h2>
+        <p>No te vas a arrepentir!</p>
+        <a href="#menu" class="btn btn-verde">Pedí ahora</a>
       </div>
     </div>
 
@@ -243,24 +372,25 @@
       SECCION DE CHEF 
     -->
 
-    <section class="chef contenedor">
+    <section id="chef" class="chef">
       <h2>Mauro y Jorge</h2>
-      <div class="contenido-chef">
+      <div class="contenido-chef contenedor">
         <div class="texto-chef">
-          <h3>
-            Hola hola hola hola hola hola safgasf asd fsdfas safasfsad
-            sadfsadfas
-          </h3>
+          <h3>Experiencia y Pasión en Cada Plato</h3>
+
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-            voluptas dolore repellat, fuga possimus ipsum optio, itaque
-            necessitatibus velit aspernatur deleniti? Atque beatae iste iusto
-            architecto sed commodi ipsum natus.
+            Mauro y Jorge son apasionados chefs con una amplia experiencia en la
+            creación de platos exquisitos. Su dedicación a la excelencia
+            culinaria se refleja en cada receta que elaboran. Con un enfoque
+            único y creativo, transforman ingredientes frescos en obras maestras
+            gastronómicas. Descubre la magia de sus creaciones mientras te
+            llevan en un viaje culinario que despertará tus sentidos.
           </p>
+
           <a href="#" class="btn btn-verde">Leer Más</a>
         </div>
         <div class="imagen-chef">
-          <img data-src="/assets/chef.webp" alt="foto de los chef" />
+          <img data-src="/assets/losPibes.png" alt="cocineros" />
         </div>
       </div>
     </section>
@@ -271,14 +401,19 @@
 
     <div class="formulario-contacto">
       <div class="informacion-contacto contenedor">
-        <h3>Contactanos</h3>
-        <p><i class="fa-solid fa-location-dot"></i>DIRECCION</p>
+        <h3>Contáctanos</h3>
+        <p><i class="fa-solid fa-location-dot"></i>DIRECCIÓN</p>
         <p><i class="fa-solid fa-envelope"></i>MAIL</p>
-        <p><i class="fa-solid fa-phone"></i>+54 11-5824-6387</p>
-        <p><i <i class="fa-brands fa-instagram"></i>@milanofoodstore</p>
+        <p><i class="fa-brands fa-whatsapp"></i>+54 11-5824-6387</p>
+        <p>
+          <i class="fab fa-instagram"></i
+          ><a href="https://www.instagram.com/milanofoodstore/" target="_blank">
+            @milanofoodstore</a
+          >
+        </p>
         <!-- HACERLO LINK -->
       </div>
-      <form class="formulario">
+      <form id="contacto" class="formulario">
         <div class="input-formulario">
           <label for="nombre">Nombre</label>
           <input type="text" placeholder="Ingrese su nombre" id="nombre" />
@@ -292,7 +427,7 @@
           <input type="email" placeholder="Ingrese su email" id="correo" />
         </div>
         <div class="input-formulario">
-          <label for="telefono">Telefono</label>
+          <label for="telefono">Teléfono</label>
           <input
             type="tel"
             placeholder="ej: +54 911 15-6037-6134"
@@ -309,10 +444,10 @@
       </form>
     </div>
 
-    <div class="pie-pagina contenedor">
-      <div class="contenedor-piepagina">
+    <div class="pie-pagina">
+      <div class="contenedor-piepagina contenedor">
         <div class="info">
-          <h3><i class="fa-solid fa-location-dot"></i></i> Dirección</h3>
+          <h3><i class="fa-solid fa-location-dot"></i> Dirección</h3>
           <p>123 Calle Principal, Ciudad</p>
         </div>
         <div class="info">
@@ -320,14 +455,18 @@
           <p>Lunes a Domingo: 9 AM - 10 PM</p>
         </div>
         <div class="info">
-          <h3><i class="fa-solid fa-phone"></i> Teléfono</h3>
+          <h3><i class="fa-brands fa-whatsapp"></i> Teléfono</h3>
           <p>+54 11-1234-5678</p>
         </div>
         <div class="info">
           <h3><i class="fa-brands fa-instagram"></i> Instagram</h3>
           <p>
-            <span class="instagram-icon"> </span>
-            @milanofoodstore
+            <a
+              href="https://www.instagram.com/milanofoodstore/"
+              target="_blank"
+            >
+              @milanofoodstore</a
+            >
           </p>
         </div>
       </div>
