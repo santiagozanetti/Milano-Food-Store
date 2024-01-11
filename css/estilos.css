@@ -1,12 +1,15 @@
 /* CUSTOM PROPERTIES */
 :root {
-  --verde: #00a149;
+  /*   --verde: #00a149; */
   --blanco: #fff;
-  --rojo: #ff0000;
+  /* --rojo: #ff0000; */
   --oscuro: #000;
   --naranjaMilano: #ffac28;
-  --titulos: "Arima Madurai", cursive;
+  /*  --titulos: "Arima Madurai", cursive; */
+  --titulos: "Montserrat", sans-serif;
   --parrafos: "Mulish", sans-serif;
+  --verde: #ffac28;
+  --rojo: #e07300;
 }
 
 html {
@@ -36,11 +39,11 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--titulos);
 }
 
-h3,
 p,
 a {
   font-family: var(--parrafos);
@@ -48,6 +51,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .ocultar {
@@ -97,7 +101,7 @@ img {
   text-transform: capitalize;
   padding: 1rem 5rem;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -129,7 +133,7 @@ img {
   font-weight: bold;
   cursor: pointer;
   color: var(--blanco);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 .btn-rojo {
@@ -170,6 +174,7 @@ img {
 .logo h2,
 .navegacion a {
   color: var(--blanco);
+  font-weight: bold;
 }
 
 .logo h2 {
@@ -200,16 +205,15 @@ img {
 }
 
 .navegacion a:first-child {
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .navegacion {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 28rem;
+
+  width: 28rem; /* ancho del menu*/
   padding: 3rem 2rem;
   background-color: var(--oscuro);
   animation: desplazamiento 0.5s ease-in-out;
@@ -217,7 +221,11 @@ img {
 
 .navegacion,
 .ocultar {
-  transition: transform 0.9s ease-in-out;
+  animation: desplazamiento 0.5s ease-in-out;
+}
+
+.ocultar {
+  right: 0;
 }
 
 .hamburguesa {
@@ -252,13 +260,14 @@ img {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Asegúrate de que la pseudo-clase esté detrás del contenido */
 }
 
 .texto-encabezado {
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 80%;
+  height: 100%; /* Cambiado de 80% a 100% */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -268,6 +277,8 @@ img {
 .texto-encabezado h2 {
   color: var(--blanco);
   font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
   margin-bottom: 3rem; /* Agregar margen inferior para separar del botón */
 }
 
@@ -381,7 +392,7 @@ video {
   color: var(--blanco);
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .texto-nosotros a.btn-verde:hover {
@@ -438,12 +449,12 @@ video {
 .botones-platos button {
   flex: 0 0 calc(50% - 1rem);
   padding: 1rem 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   background-color: var(--verde);
   color: var(--blanco);
   border: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.9); /* Ajusta el sombreado al pasar el ratón */
 }
 
@@ -589,7 +600,8 @@ video {
 /* seccion chef*/
 .chef {
   text-align: center;
-  padding: 2rem 0; /* Añado padding a la sección, titulo H2 */
+  padding: 0; /* Añado padding a la sección, titulo H2 */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
 .chef h2 {
@@ -601,8 +613,7 @@ video {
   margin-bottom: 1rem;
   margin-top: 0;
   width: 100%;
-  border-radius: 5px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .imagen-chef img {
@@ -636,7 +647,7 @@ video {
 }
 
 .texto-chef {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 2rem; /* Aumento el margen inferior del texto del chef */
 }
 
@@ -658,7 +669,7 @@ video {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Agrega una transición de color suave */
+  transition: background-color 0.1s ease; /* Agrega una transición de color suave */
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Agrega sombreado al botón */
 }
 
@@ -686,6 +697,7 @@ video {
   align-items: center;
   background-color: var(--oscuro);
   padding: 2rem;
+  border-radius: 18px;
 }
 
 .informacion-contacto p a {

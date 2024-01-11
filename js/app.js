@@ -39,10 +39,15 @@ const mostrarBotonCerrar = () => {
 
   const btnCerrar = document.createElement("p");
   const overlay = document.createElement("div");
-  overlay.classList.add("pantalla-completa");
-  const body = document.querySelector("body");
-  if (document.querySelectorAll(".pantalla-completa").length > 0) return;
-  body.appendChild(overlay);
+
+  // Verifica si el menú está cerrado antes de agregar la clase
+  if (navegacion.classList.contains("ocultar")) {
+    overlay.classList.add("pantalla-completa");
+    const body = document.querySelector("body");
+    if (document.querySelectorAll(".pantalla-completa").length > 0) return;
+    body.appendChild(overlay);
+  }
+
   btnCerrar.textContent = "x";
   btnCerrar.classList.add("btn-cerrar");
   navegacion.appendChild(btnCerrar);
