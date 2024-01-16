@@ -177,9 +177,52 @@ img {
   font-weight: bold;
 }
 
-.logo h2 {
-  font-size: 3rem;
+/* Estilos para dispositivos móviles */
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 18%; /* Ajusta el ancho de la imagen */
+  height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.logo h1 {
+  font-size: 15px;
   color: var(--naranjaMilano);
+  margin-bottom: 5px; /* Ajusta el margen inferior entre h1 y h2 en dispositivos móviles */
+  align-items: center;
+}
+
+.logo h2 {
+  font-size: 12px;
+  color: #888;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* Media Query para pantallas grandes (min-width: 768px) */
+@media (min-width: 768px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    width: 10%; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
+  }
+
+  .logo h1 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 5px; /* Ajusta el margen inferior entre h1 y h2 */
+  }
+
+  .logo h2 {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 0; /* Elimina el margen superior por defecto del h2 */
+  }
 }
 
 .navegacion a {
@@ -208,15 +251,30 @@ img {
   margin-top: 6rem;
 }
 
+/* Estilos base para el menú */
 .navegacion {
   position: absolute;
+  width: 100%; /* Ancho del menú según tu diseño */
   top: 0;
+  bottom: 0;
   right: 0;
-
-  width: 28rem; /* ancho del menu*/
-  padding: 3rem 2rem;
+  height: fit-content;
+  padding: 1.4rem 4rem;
   background-color: var(--oscuro);
   animation: desplazamiento 0.5s ease-in-out;
+}
+
+/* Media query para pantallas más grandes (min-width: 768px) */
+@media (min-width: 768px) {
+  .navegacion {
+    position: absolute;
+    width: 32rem;
+    top: 0;
+    right: 0;
+    right: 0;
+    height: 126.8vh; /* Ocupar toda la altura de la pantalla */
+    transition: height 0.5s ease-in-out; /* Agregar transición para animar cambios en la altura */
+  }
 }
 
 .navegacion,
@@ -229,9 +287,9 @@ img {
 }
 
 .hamburguesa {
-  padding: 0.5rem;
+  padding: 0.3rem;
   border: 2px solid var(--blanco);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .hamburguesa:hover {
@@ -241,13 +299,32 @@ img {
 .hamburguesa span {
   background-color: var(--blanco);
   display: block;
-  width: 5rem;
-  height: 0.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.4rem; /* separo los span */
+  width: 4rem;
+  height: 0.4rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.5rem; /* separo los span */
+}
+
+@media (min-width: 768px) {
+  /* PANTALLA GRANDE*/
+  .hamburguesa span {
+    background-color: var(--blanco);
+    display: block;
+    width: 5rem;
+    height: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.4rem; /* separo los span */
+  }
+  .hamburguesa {
+    padding: 0.5rem;
+    border: 2px solid var(--blanco);
+    border-radius: 5px;
+  }
 }
 
 /* VIDEO */
+/* Establecer estilos globales si los tienes */
+
 .contenido-header {
   position: relative;
 }
@@ -260,43 +337,74 @@ img {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1; /* Asegúrate de que la pseudo-clase esté detrás del contenido */
+  z-index: 1;
 }
 
 .texto-encabezado {
   position: absolute;
   z-index: 2;
-  width: 100%;
-  height: 100%; /* Cambiado de 80% a 100% */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .texto-encabezado h2 {
   color: var(--blanco);
-  font-size: 4rem;
+  font-size: 2rem; /* Ajuste de tamaño para dispositivos móviles */
   font-weight: bold;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-  margin-bottom: 3rem; /* Agregar margen inferior para separar del botón */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem; /* Reducción del margen inferior */
 }
 
 .texto-encabezado a {
   display: inline-block;
-  padding: 1rem 2rem;
-  margin-top: 2rem; /* Añadir espacio entre el texto y el botón */
+  padding: 0.8rem 1.5rem; /* Ajuste de padding para dispositivos móviles */
+  margin-top: 1rem; /* Reducción del margen superior */
+  background-color: var(--naranjaMilano);
+  color: var(--blanco);
+  text-decoration: none;
+  border: 2px solid var(--blanco);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+.texto-encabezado a:hover {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+/* Estilos generales para dispositivos móviles */
+.texto-encabezado a.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1.6rem; /* Ajusta el tamaño del texto en dispositivos móviles */
+}
+
+/* Media Query para pantallas grandes (min-width: 768px) */
 @media (min-width: 768px) {
-  .texto-encabezado h2 {
-    font-size: 8rem;
+  .texto-encabezado a.btn {
+    font-size: 2.5rem; /* Ajusta el tamaño del texto en pantallas grandes */
   }
 }
 
 video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/* Media Query para pantallas grandes */
+@media (min-width: 768px) {
+  .texto-encabezado h2 {
+    font-size: 6rem; /* Ajuste de tamaño para pantallas grandes */
+  }
+
+  .texto-encabezado a {
+    padding: 1rem 2rem; /* Ajuste de padding para pantallas grandes */
+  }
 }
 
 /* sobre nosotros*/
@@ -313,11 +421,32 @@ video {
     justify-content: space-between;
     align-items: initial; /* Restauramos el alineamiento por defecto */
   }
+  .texto-nosotros {
+    text-align: left;
+  }
+  .texto-nosotros .bienvenida {
+    text-align: left;
+  }
+  .texto-nosotros h1 {
+    font-size: 5rem;
+    margin-left: 0;
+    text-align: left !important; /* Agrega !important para aumentar la especificidad */
+  }
+
+  .texto-nosotros .descripcion {
+    text-align: left;
+    padding: 1rem 3.5rem 1rem 0.2rem;
+    font-size: 1.8rem;
+  }
+  .texto-nosotros p {
+    text-align: left;
+  }
 }
 
 .texto-nosotros,
 .imagenes-nosotros {
   width: 100%; /* Ancho del 100% en dispositivos móviles */
+  text-align: left;
 }
 
 .texto-nosotros .bienvenida {
@@ -328,55 +457,37 @@ video {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
-  .texto-nosotros {
-    text-align: left;
-  }
-  .texto-nosotros .bienvenida {
-    text-align: left;
-  }
-}
-
 .texto-nosotros h1 {
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 1.5rem; /* Agrega espacio entre elementos */
   margin-bottom: 1rem;
   color: var(--verde);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-@media (min-width: 768px) {
-  .texto-nosotros h1 {
-    font-size: 5rem;
-    text-align: left;
-  }
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); */
 }
 
 .texto-nosotros p {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 2.5rem;
-  line-height: normal;
+  line-height: 1.5;
   color: var(--gris-oscuro);
 }
 
 .texto-nosotros .descripcion {
-  font-size: 1.8rem;
-  text-align: justify;
+  font-size: 2rem;
+  text-align: left;
   margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .texto-nosotros .descripcion {
-    text-align: left;
-  }
+  line-height: 1.5;
+  color: #333;
+  letter-spacing: 0.06em; /* Puedes ajustar según sea necesario */
 }
 
 .texto-nosotros a {
+  color: var(--verde); /* Cambia el color de los enlaces */
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.8rem;
   margin-top: 1rem;
+  text-decoration: underline; /* Agrega subrayado para indicar que son enlaces */
 }
 
 .texto-nosotros p span.destacado {
@@ -393,16 +504,12 @@ video {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.1s ease-in-out;
+  margin-left: 0;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); */
 }
 
 .texto-nosotros a.btn-verde:hover {
   background-color: var(--rojo); /* Cambia el color en el hover */
-}
-
-@media (min-width: 768px) {
-  .texto-nosotros p {
-    text-align: left;
-  }
 }
 
 .imagenes-nosotros {
@@ -412,8 +519,10 @@ video {
 }
 
 .imagenes-nosotros img {
-  border-radius: 8px;
-  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.7);
+  width: 100%; /* Ocupa el 100% del contenedor */
+  max-height: 100%; /* Asegura que no se sobrepase de la altura del contenedor */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  height: 45%;
 }
 
 .imagen1,
@@ -455,7 +564,7 @@ video {
   border: none;
   border-radius: 5px;
   transition: background-color 0.1s ease-in-out;
-  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.9); /* Ajusta el sombreado al pasar el ratón */
+  /* box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.0); */ /* Ajusta el sombreado al pasar el ratón */
 }
 
 /* Unifica las reglas de medios */
@@ -472,8 +581,16 @@ video {
   .platos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
+}
+
+.plato img {
+  width: 300px; /* Establece el ancho deseado */
+  height: 200px; /* Establece la altura deseada */
+  object-fit: cover; /* Mantiene la proporción y cubre el área especificada */
+  display: block; /* Elimina el espacio adicional debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen dentro de su contenedor */
 }
 
 /* Agrega un estilo para resaltar el botón activo */
@@ -550,11 +667,6 @@ video {
   text-align: center;
 }
 
-.contenido-separador h2,
-.contenido-separador p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
 @media (min-width: 768px) {
   .contenido-separador h2 {
     text-align: left;
@@ -575,7 +687,7 @@ video {
   font-size: 2.5rem; /* Ajusta el tamaño del texto del botón */
   text-align: center;
   margin: 20px 0; /* Ajusta el margen para separar el botón del párrafo */
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); */
 }
 
 @media (max-width: 767px) {
@@ -597,11 +709,11 @@ video {
   }
 }
 
-/* seccion chef*/
+/* SECCION CHEF*/
 .chef {
   text-align: center;
   padding: 0; /* Añado padding a la sección, titulo H2 */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
 }
 
 .chef h2 {
@@ -609,17 +721,17 @@ video {
   display: inline-block;
   padding: 1rem 2rem; /* Aumento el padding vertical y horizontal para un mejor aspecto */
   color: var(--blanco);
-  font-size: 4rem;
+  font-size: 3.9rem;
   margin-bottom: 1rem;
   margin-top: 0;
   width: 100%;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  /* text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4); */
 }
 
 .imagen-chef img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Agrega sombreado a la imagen */
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agrega sombreado a la imagen */
 }
 
 @media (min-width: 768px) {
@@ -642,18 +754,23 @@ video {
 
   .imagen-chef img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0px;
+  }
+  .chef h2 {
+    font-size: 4rem;
   }
 }
 
 .texto-chef {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
   margin-bottom: 2rem; /* Aumento el margen inferior del texto del chef */
 }
 
 .texto-chef h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--naranjaMilano);
+  font-weight: bold;
 }
 
 .texto-chef p {
@@ -670,12 +787,12 @@ video {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.1s ease; /* Agrega una transición de color suave */
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Agrega sombreado al botón */
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); */ /* Agrega sombreado al botón */
 }
 
 .btn-verde:hover {
   background-color: var(--rojo); /* Cambia el color al pasar el ratón */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); /* Ajusta el sombreado al pasar el ratón */
+  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); */ /* Ajusta el sombreado al pasar el ratón */
 }
 
 .formulario-contacto {
@@ -797,7 +914,7 @@ video {
 
 .pie-pagina p a {
   color: var(--naranjaMilano);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .pie-pagina p a:hover {

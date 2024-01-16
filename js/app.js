@@ -1,8 +1,8 @@
 const menu = document.querySelector(".hamburguesa");
 const navegacion = document.querySelector(".navegacion");
 const imagenes = document.querySelectorAll("img");
-const btnTodos = document.querySelector(".todos");
-const btnEnsaladas = document.querySelector(".ensaladas");
+/* const btnTodos = document.querySelector(".todos"); */
+const btnEntradas = document.querySelector(".entradas");
 const btnPasta = document.querySelector(".pasta");
 const btnPizza = document.querySelector(".pizza");
 const btnPostres = document.querySelector(".postres");
@@ -99,8 +99,8 @@ const platos = () => {
 
   platos.forEach((plato) => (platosArreglo = [...platosArreglo, plato]));
 
-  const ensaladas = platosArreglo.filter(
-    (ensalada) => ensalada.getAttribute("data-plato") === "ensalada"
+  const entradas = platosArreglo.filter(
+    (entrada) => entrada.getAttribute("data-plato") === "entrada"
   );
 
   const pastas = platosArreglo.filter(
@@ -115,11 +115,16 @@ const platos = () => {
     (postre) => postre.getAttribute("data-plato") === "postre"
   );
 
-  mostrarPlatos(ensaladas, pastas, pizzas, postres, platosArreglo);
+  mostrarPlatos(entradas, pastas, pizzas, postres, platosArreglo);
 };
 
-const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
+const mostrarPlatos = (entradas, pastas, pizzas, postres, platosArreglo) => {
   const botonesCategorias = document.querySelectorAll(".botones-platos .btn");
+
+  limpiarHtml(contenedorPlatos);
+
+  // Mostrar la categoría "entradas" por defecto
+  entradas.forEach((entrada) => contenedorPlatos.appendChild(entrada));
 
   botonesCategorias.forEach((btnCategoria) => {
     btnCategoria.addEventListener("click", () => {
@@ -132,10 +137,8 @@ const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
       limpiarHtml(contenedorPlatos);
 
       switch (btnCategoria.getAttribute("data-categoria")) {
-        case "ensaladas":
-          ensaladas.forEach((ensalada) =>
-            contenedorPlatos.appendChild(ensalada)
-          );
+        case "entrada":
+          entradas.forEach((entrada) => contenedorPlatos.appendChild(entrada));
           break;
         case "pasta":
           pastas.forEach((pasta) => contenedorPlatos.appendChild(pasta));
@@ -146,9 +149,6 @@ const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
         case "postres":
           postres.forEach((postre) => contenedorPlatos.appendChild(postre));
           break;
-        default:
-          todos.forEach((todo) => contenedorPlatos.appendChild(todo));
-          break;
       }
 
       navegacion.classList.add("ocultar");
@@ -157,8 +157,9 @@ const mostrarPlatos = (ensaladas, pastas, pizzas, postres, todos) => {
   });
 };
 
-const limpiarHtml = (contenedor) => {
-  while (contenedor.firstChild) {
-    contenedor.removeChild(contenedor.firstChild);
+// Función para limpiar el contenido HTML
+const limpiarHtml = (elemento) => {
+  while (elemento.firstChild) {
+    elemento.removeChild(elemento.firstChild);
   }
 };
